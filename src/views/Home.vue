@@ -1,5 +1,5 @@
 <template>
-  <div class="home_wrapper">
+  <Layout class="home_wrapper">
     <p>学习的路上是孤独的</p>
     <p>希望我们都能坚持住这种孤独</p>
     <div class="actor_wrapper">
@@ -9,7 +9,7 @@
     <router-link to="works">
       <button class="start">start</button>
     </router-link>
-  </div>
+  </Layout>
 </template>
 
 <script lang="ts">
@@ -17,7 +17,9 @@ import { Component, Vue } from 'vue-property-decorator'
 import Nav from '@/components/Header.vue'
 
 @Component({
-  components: { Nav }
+  components: {
+    Nav
+  }
 })
 export default class Home extends Vue {
 
@@ -30,8 +32,6 @@ export default class Home extends Vue {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 80px - 100px);
-  background: #C3EDFE;
   > p {
     margin-bottom: 88px;
     font-size: 60px;

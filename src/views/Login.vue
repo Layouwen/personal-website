@@ -1,7 +1,7 @@
 <template>
-  <div class="login-wrapper">
+  <Layout class="login-wrapper">
     我是登录页
-  </div>
+  </Layout>
 </template>
 
 <script lang="ts">
