@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Nav />
+    <Header />
     <router-view />
     <Footer />
   </div>
@@ -8,13 +8,13 @@
 
 <script lang="ts">
 import Footer from '@/components/Footer.vue'
-import Nav from '@/components/Header.vue'
+import Header from '@/components/Header.vue'
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component({
   components: {
     Footer,
-    Nav
+    Header
   }
 })
 export default class App extends Vue {}

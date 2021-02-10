@@ -1,11 +1,11 @@
 <template>
-  <div class="nav-wrapper">
+  <div class="header_wrapper">
     <div class="container">
       <h1 class="logo"></h1>
       <nav>
         <router-link to="/">首页</router-link>
         <router-link to="/">作品集</router-link>
-        <router-link to="/">博客</router-link>
+        <a href="https://www.yuque.com/waver-klavd" target="_blank">博客</a>
         <router-link to="/">团队资料</router-link>
         <router-link to="/">联系方式</router-link>
         <router-link to="/">留言板</router-link>
@@ -22,14 +22,14 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component({})
-export default class Nav extends Vue {
+export default class Header extends Vue {
 }
 </script>
 
 <style lang="scss" scoped>
 $borderColor: #5a89c7;
 $fontColor: #707070;
-.nav-wrapper {
+.header_wrapper {
   width: 100%;
   background: #FCFCFC;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
