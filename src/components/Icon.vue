@@ -1,23 +1,23 @@
 <template>
-  <svg class="icon" aria-hidden="true">
+  <svg @click="$emit('click')" class="icon" aria-hidden="true">
     <use :xlink:href="`#`+name"></use>
   </svg>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 // import all icons
-const importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext)
+const importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
 try {
-  importAll(require.context('../assets/icons', true, /\.svg$/))
+  importAll(require.context('../assets/icons', true, /\.svg$/));
 } catch (error) {
-  console.error(error)
+  console.error(error);
 }
 
 @Component({})
 export default class Icon extends Vue {
-  @Prop() name !: string
+  @Prop() name !: string;
 }
 </script>
 
