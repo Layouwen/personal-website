@@ -20,6 +20,11 @@ const routes: Array<RouteConfig> = [
     component: () => import('../views/Login.vue')
   },
   {
+    path: '/signup',
+    name: 'SignUp',
+    component: () => import('../views/SignUp.vue')
+  },
+  {
     path: '*',
     name: 'notFound',
     component: () => import('../views/notFound.vue')
