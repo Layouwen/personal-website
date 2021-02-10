@@ -1,18 +1,69 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="home_wrapper">
+    <p>学习的路上是孤独的</p>
+    <p>希望我们都能坚持住这种孤独</p>
+    <div class="actor_wrapper">
+      <div class="line" />
+      <p>梁又文</p>
+    </div>
+    <router-link to="works">
+      <button class="start">start</button>
+    </router-link>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+import Nav from '@/components/Header.vue'
 
 @Component({
-  components: {
-    HelloWorld
-  }
+  components: { Nav }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+
+}
 </script>
+
+<style lang="scss">
+.home_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px - 100px);
+  background: #C3EDFE;
+  > p {
+    margin-bottom: 88px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+  }
+  > .actor_wrapper {
+    transform: translateX(70%);
+    display: flex;
+    align-items: center;
+    margin-bottom: 88px;
+    > .line {
+      width: 100px;
+      height: 6px;
+      background: #fff;
+      border-radius: 7px;
+    }
+    > p {
+      margin-left: 32px;
+      font-size: 60px;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+  > a > .start {
+    width: 450px;
+    height: 100px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 50px;
+    background: #BDBDFF;
+  }
+}
+</style>
