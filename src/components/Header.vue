@@ -3,12 +3,12 @@
     <div class="container">
       <h1 class="logo"></h1>
       <nav>
-        <router-link to="/">首页</router-link>
-        <router-link to="/">作品集</router-link>
+        <router-link to="/index" active-class="selected">首页</router-link>
+        <router-link to="/works" active-class="selected">作品集</router-link>
         <a href="https://www.yuque.com/waver-klavd" target="_blank">博客</a>
-        <router-link to="/">团队资料</router-link>
-        <router-link to="/">联系方式</router-link>
-        <router-link to="/">留言板</router-link>
+        <router-link to="/teaminfo" active-class="selected">团队资料</router-link>
+        <router-link to="/contact" active-class="selected">联系方式</router-link>
+        <router-link to="/messageboard" active-class="selected">留言板</router-link>
       </nav>
       <div class="user_info">
         <router-link to="/login" class="login">登录</router-link>
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({})
 export default class Header extends Vue {
@@ -49,6 +49,9 @@ $fontColor: #707070;
       display: flex;
       > a {
         margin-left: 27px;
+        &.selected {
+          color: #bdbdff;
+        }
       }
     }
     > .user_info {
