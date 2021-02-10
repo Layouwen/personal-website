@@ -1,11 +1,11 @@
-$fontColor: #707070;
-$active: #4488FF;
+@import "~@/assets/styles/helper.scss";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   color: $fontColor;
+  font-family: $heiti;
 }
 
 a {
