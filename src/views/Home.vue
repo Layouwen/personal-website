@@ -4,7 +4,7 @@
     <p>希望我们都能坚持住这种孤独</p>
     <div class="actor_wrapper">
       <div class="line" />
-      <p>梁又文</p>
+      <p>梁同学</p>
     </div>
     <router-link to="works">
       <button class="start">start</button>
@@ -13,8 +13,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Nav from '@/components/Header.vue'
+import { Component, Vue } from 'vue-property-decorator';
+import Nav from '@/components/Header.vue';
 
 @Component({
   components: {
