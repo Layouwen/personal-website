@@ -17,7 +17,7 @@ try {
 
 @Component({})
 export default class Icon extends Vue {
-  @Prop() name !: string;
+  @Prop(String) name !: string;
 }
 </script>
 
